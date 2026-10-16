@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>RandomChat: talk to a random stranger</title>
+  <meta name="description" content="Anonymous random chat. Get paired with a random stranger and talk about anything." />
+  <meta name="theme-color" content="#f6efe1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Space+Mono&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <span class="material-icons-round brandIcon">forum</span>
+        <div class="brandText">
+          <h1>Random<span>Chat</span></h1>
+          <p id="status" class="status connecting">
+            <span class="pulse"></span>
+            <span id="statusText">Connecting</span>
+          </p>
+        </div>
+      </div>
+      <div class="online" title="People connected right now">
+        <span class="liveDot"></span>
+        <span id="onlineCount">0</span>
+        <span class="onlineLabel">online</span>
+      </div>
+    </header>
+
+    <main id="messages" class="messages" aria-live="polite">
+      <div id="skeleton" class="skeleton">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </main>
+
+    <div class="typingRow">
+      <span id="typing" class="typing" hidden>
+        <span id="typingName">Stranger</span>
+        <span>is typing</span>
+        <span class="typingDots"><i></i><i></i><i></i></span>
+      </span>
+    </div>
+
+    <form id="composer" class="composer" autocomplete="off">
+      <input id="input" class="input" type="text" placeholder="Searching for a partner" maxlength="2000" autocomplete="off" disabled />
+      <button id="send" class="btn btnSend" type="submit" title="Send message" disabled>
+        <span class="material-icons-round">send</span>
+      </button>
+      <button id="new" class="btn btnNew" type="button" title="Leave this chat and find a new partner" disabled>
+        <span class="material-icons-round">shuffle</span>
+        <span class="btnLabel">New partner</span>
+      </button>
+    </form>
+  </div>
+  <script src="/app.js" defer></script>
+</body>
+</html>

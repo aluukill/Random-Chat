@@ -1,0 +1,18 @@
+{
+  "name": "randomchat",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Anonymous random chat. Get paired with a random stranger the moment the page opens.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node scripts/smokeTest.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}
